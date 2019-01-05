@@ -1,0 +1,92 @@
+
+
+.video-cards {
+
+    overflow-y: auto;
+    max-height: 330px;
+    width: 100%;
+    position: relative;
+
+    .performer{
+        margin-bottom: 5px;
+        width: 100%;
+        padding: 10px;
+        display: inline-block;
+
+        .thumbnail{
+            background-color: #acacb9;
+            display: block;
+            position: relative;
+            margin-left: 10px;
+            width: 134px;
+            float: left;
+        
+            img{
+                width: 134px;
+                height: 80px;
+            }
+
+            p{
+                color: #222222;
+                font-family: 'Roboto', sans-serif;
+                text-align: center;
+                font-weight: 200;
+                font-size: 14px;
+                text-indent: 0 !important;
+            }
+        
+            em{
+                color: lightgrey;
+                font-size: 12px;
+                float: right;
+            }
+        }
+
+        .description{
+            padding: 0px;
+            display: inline-grid;
+        
+            p{
+                padding: 5px;
+            }
+        }
+
+        .profile{
+            margin: 0 20px;
+            float: right;
+            display: block;
+            margin-top: -10px;
+
+            img{
+                border-radius: 50%;
+            }
+
+            p{
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+        }
+        
+        .videos{
+            padding: 0px;
+
+            img{
+                margin: 5px;
+                width: 140px;
+            }
+
+        }
+}
+
+@media only screen and (max-width: 600px) {
+    .description{
+        display: block !important;
+    }
+    .profile{
+        margin: 0 20px;
+        right: 0;
+        display: block;
+        position: absolute;
+    }
+}

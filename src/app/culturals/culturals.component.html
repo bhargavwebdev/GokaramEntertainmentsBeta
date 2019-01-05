@@ -1,0 +1,13 @@
+<section class="section-less-padding">
+  <div class="culturals">
+          <a class="cultural-card" routerLinkActive="active-background" 
+          [routerLink]="[cultural.id]"
+          *ngFor="let cultural of culturals; let i = index">
+                  <img src="{{cultural.imgPath}}" width="100">
+                  <div class="caption">
+                          {{cultural.name}}
+                  </div>
+          </a>
+  </div>
+</section>
+<router-outlet></router-outlet>

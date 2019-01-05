@@ -1,1 +1,160 @@
 /* You can add global styles to this file, and also import other style files */
+@import "variables.scss";
+
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif ;
+}
+
+a{
+    text-decoration: none;
+    outline: 0;
+
+    &.active{
+        // background: white !important;
+    }
+}
+
+.active{
+    color: white !important;
+    background-image: url('src/assets/headingBg.png');
+    background-size: cover;
+    box-shadow: 0 0 4px 2px #91a3df;
+}
+
+.active-background{
+    color: white !important;
+    background: $tab_text !important;
+}
+
+section{
+    width: 60%;
+    padding: 80px 50px 20px 50px;
+    margin: 0px auto 50px;
+    background: white;       
+    position: relative;
+    box-shadow: 0px 0px 30px 0px rgb(167, 167, 167);
+
+    h3{
+    background-image: url('src/assets/headingBg.png');
+    background-size: cover;
+    min-width: 100px;
+    max-width: 200px;
+    // width: 120px;
+    font-weight: 500;
+    left: 0;
+    top: 10px;
+    }
+    
+    p{
+        font-size: 14px;
+     }
+
+}
+
+.section-less-padding{
+    padding-top: 25px !important;
+}
+
+button{
+    outline: 0;
+    border:0;
+    margin: 5px;
+}
+
+
+
+button.action{
+    background-color: #94db4d;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    height: 26px;
+    display: block;
+    float: left;
+}
+
+
+
+
+.col-md-6{
+    width: 50%;
+}
+
+.container{
+    display: flex;
+    justify-content: left;
+}
+
+input,textarea{
+    padding: 10px 10px;
+    border: 1px solid #c2c2c2;
+    border-radius: 0px;
+    width: 80%;
+    background: #ddd;
+    margin: 5px;
+    outline: 0;
+}
+
+input[type="submit"]{
+    background: #071118;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+
+.md-size{
+    font-size: 14px !important;
+}
+
+.indent{
+    text-indent: 80px !important;
+    margin-bottom: 20px;
+}
+
+span{
+    font-family: 'Roboto';
+    line-height: 2rem;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat';
+    margin: 0  0 20px 0;
+}
+.white{
+    color:white;
+}
+.main-head{
+    position: absolute;
+    color: $white;
+    font-size: 16px;
+    padding: 10px;
+    z-index: 1;
+
+}
+p{
+    color: $tab_text;
+    line-height: 1.5rem;
+    font-size: 12px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    section{
+        width: 98% !important;
+        padding-top: 80px !important;
+        padding: 10px;
+        margin: 30px auto;
+        box-shadow: 0px 0px 10px 0px rgb(167, 167, 167);
+    }
+
+    button.action{
+        padding:2px !important;
+        font-size: 14px;
+        margin: 2px !important;
+    }
+    
+}

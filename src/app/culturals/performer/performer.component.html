@@ -1,0 +1,32 @@
+<section>
+  <h3 class="main-head ">Artist Profile</h3>
+<!-- <div class="cultural-videos"> -->
+  <div class="video-cards">
+    <div class="performer" *ngFor="let profile of profiles">
+      <div class="thumbnail">
+        <img src="../../assets/culturals/kuchipudi.jpg" width="100">
+              <p>Title</p>
+      </div>
+      <div class="description">
+          <p><b>Name: </b> Bhargav<br/>
+          <b>Place: </b> Hyderabad<br/>
+          <b>About: </b> 5years Experince<br/>
+          <b>Price: </b> 10,000</p>
+          <div>
+                  <button class="action">ORDER</button>
+          </div>
+      </div>
+      <div class="profile">
+        <img src="{{profile.profileImgPath}}" width="100">
+        <p class="no-indent">Bhargav</p>
+      </div>
+    </div>
+    <div class="videos">
+      <img src="../../assets/culturals/kuchipudi.jpg" width="100">
+      <img src="../../assets/culturals/kuchipudi.jpg" width="100">
+      <img src="../../assets/culturals/kuchipudi.jpg" width="100">
+      <img src="../../assets/culturals/kuchipudi.jpg" width="100">
+    </div>
+  </div>
+<!-- </div>     -->
+</section>

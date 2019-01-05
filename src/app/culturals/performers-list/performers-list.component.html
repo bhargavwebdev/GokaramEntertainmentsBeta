@@ -1,0 +1,27 @@
+<section id="cultural-videos">
+  <h3 class="main-head" *ngFor="let cult of cultural">{{cult.name}}</h3>
+          <div class="video-cards" *ngIf="isPerformers; else errorText">
+                  <div class="performer"  *ngFor="let performer of performers; let i=index">
+                          <div class="thumbnail">
+                                  <img src="{{performer.imgPath}}">
+                                  <p>{{performer.name}}</p>
+                                  <!-- <em>-Gokaram Ravinder</em> -->
+                          </div>
+                          <div class="description">
+                                  <p><b>Name: </b> {{performer.name}}<br />
+                                          <b>Place: </b> {{performer.place}}<br />
+                                          <b>About: </b> {{performer.about}} Experince<br />
+                                          <b>Price: </b> {{performer.price}}</p>
+                                  <div>
+                                          <button class="action" (click)="onShowProfile()">PROFILE</button>
+                                          <button class="action">ORDER</button>
+                                  </div>
+
+                          </div>
+                  </div>  
+     
+         </div>
+         <ng-template #errorText>
+          <p>No Performers</p>
+        </ng-template>
+</section>

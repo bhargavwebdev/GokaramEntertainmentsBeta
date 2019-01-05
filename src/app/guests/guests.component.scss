@@ -1,0 +1,30 @@
+.culturals{
+    padding: 10px;
+    display: inline-block;
+
+    .cultural-card{
+        padding: 2px;
+        background: #e0e1f1;
+        color: #7b7878;
+        text-align: center;
+        margin: 5px;
+        border-radius: 2px;
+        display: block;
+        font-size: 16px;
+        float: left;
+        width: 23%;
+        
+        img{
+            width: 100%;
+        }
+        .caption{
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cultural-card{
+        width: 30% !important;
+    }
+}
