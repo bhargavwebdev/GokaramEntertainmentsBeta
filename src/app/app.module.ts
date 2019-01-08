@@ -30,7 +30,7 @@ import { PerformerService } from './culturals/performers-list/perfomer.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule
   ],
   providers: [
     CulturalService,

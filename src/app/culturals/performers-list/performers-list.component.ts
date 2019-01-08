@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Cultural } from '../cultural.model';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
@@ -23,12 +23,19 @@ export class PerformersListComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private router: Router,
     private performer: PerformerService,
-    private culturalService: CulturalService) {
+    private culturalService: CulturalService,
+    private elem: ElementRef) {
     this.subscription = this.router.events
       .pipe(
         filter(event => event instanceof NavigationEnd)
       )
-      .subscribe(() => window.scrollTo(0, 1200)
+      .subscribe(() => {
+        let scrollTop;
+        const rect = this.elem.nativeElement.querySelector('#cultural-videos').getBoundingClientRect();
+        scrollTop = rect.top + window.pageYOffset - document.documentElement.clientTop - 100;
+   
+        window.scrollTo(0, scrollTop);
+      }
       );   
   }
 
@@ -51,5 +58,6 @@ export class PerformersListComponent implements OnInit {
   }
 
   ngOnDestroy(){
+    this.subscription.unsubscribe();
   }
 }

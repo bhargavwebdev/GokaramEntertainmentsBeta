@@ -86,7 +86,20 @@
     .profile{
         margin: 0 20px;
         right: 0;
-        display: block;
+        display: flex;
         position: absolute;
+
+        img{
+            margin-top: -104px;
+            width: 80px;
+        }
+    }
+    .thumbnail{
+        display: none !important;
+    }
+
+    .videos{
+        display: flex;
+        overflow-x: auto; 
     }
 }

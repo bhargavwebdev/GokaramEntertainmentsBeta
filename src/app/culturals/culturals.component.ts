@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { Cultural } from './cultural.model';
 import { CulturalService } from './cultural.service';
+import {of, fromEvent} from 'rxjs';
 
 @Component({
   selector: 'app-culturals',

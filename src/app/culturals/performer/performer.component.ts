@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Profile } from './profile.model';
 
@@ -25,5 +25,8 @@ ngOnInit() {
         this.profile = +params['profile'];
       }
     );
+
+
+   
 }
 }
