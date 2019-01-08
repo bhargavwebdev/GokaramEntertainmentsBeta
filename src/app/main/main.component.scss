@@ -3,7 +3,6 @@
     height: 500px;
     background-image: url('../../assets/banner.jpg');
     background-size: cover;
-    top: 74px;
     position: relative;
 
     p{
@@ -61,25 +60,6 @@
 }
 
 
-footer{
-    background-color: #071118;
-    color: white;
-    text-align: center;
-    width: 100%;
-    padding: 20px;
-    position: relative;
-    font-size: 12px;
-
-    .social-media{
-        margin: 10px;
-
-        a{
-            padding: 5px;
-            margin: 0 5px;
-            color: white;
-        }
-    }
-}
 
 @media only screen and (max-width: 600px) {
     .col-md-6{
@@ -112,6 +92,6 @@ footer{
     }
 
     .tabs{
-        top: 24px !important;
+        top: 30px !important;
     }
 }

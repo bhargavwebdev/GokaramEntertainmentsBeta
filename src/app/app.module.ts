@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -14,6 +14,12 @@ import { GuestsComponent } from './guests/guests.component';
 import { AdminComponent } from './admin/admin.component';
 import { CulturalService } from './culturals/cultural.service';
 import { PerformerService } from './culturals/performers-list/perfomer.service';
+import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+
+import * as firebase from 'firebase';
+import { AuthService } from './auth.service';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,10 @@ import { PerformerService } from './culturals/performers-list/perfomer.service';
     PerformersListComponent,
     PerformerComponent,
     GuestsComponent,
-    AdminComponent
+    AdminComponent,
+    FooterComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -34,8 +43,11 @@ import { PerformerService } from './culturals/performers-list/perfomer.service';
   ],
   providers: [
     CulturalService,
-    PerformerService
+    PerformerService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule{
+
+ }

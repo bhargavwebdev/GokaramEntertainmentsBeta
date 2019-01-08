@@ -6,9 +6,11 @@ import { PerformersListComponent } from './culturals/performers-list/performers-
 import { PerformerComponent } from './culturals/performer/performer.component';
 import { GuestsComponent } from './guests/guests.component';
 import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
-  {path: '',redirectTo:'/main',pathMatch: 'full'},
+  {path: '',redirectTo:'/main/culturals',pathMatch: 'full'},
   {path: 'main', component: MainComponent, children:[
     {path:'',redirectTo:'culturals',pathMatch: 'full'},
       {path:'culturals',component:CulturalsComponent, children:[
@@ -18,7 +20,8 @@ const routes: Routes = [
     {path:'guest', component: GuestsComponent}   
   ]},
   {path: 'admin', component: AdminComponent},
-  
+  {path: 'login', component: LoginComponent},
+  {path: 'signup', component: SignupComponent}
 ];
 
 @NgModule({

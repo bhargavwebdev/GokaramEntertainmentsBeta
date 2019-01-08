@@ -91,7 +91,6 @@
 
         img{
             margin-top: -104px;
-            width: 80px;
         }
     }
     .thumbnail{
@@ -101,5 +100,10 @@
     .videos{
         display: flex;
         overflow-x: auto; 
+
+        img{
+
+            width: 80px !important;
+        }
     }
 }
