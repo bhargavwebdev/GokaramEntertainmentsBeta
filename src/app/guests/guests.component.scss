@@ -55,7 +55,8 @@
         width: 70px !important;
         margin: 6px !important;
         padding: 2px !important;
-
+        overflow: hidden;
+        
         &::before{
             height: 64% !important;
         }
@@ -65,8 +66,8 @@
         }
     }
     .culturals{
-        display: flex !important;
-        overflow-x: scroll;
+        display: grid !important;
+        grid-template-columns: auto auto auto !important;
     }
 
 }
