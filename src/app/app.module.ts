@@ -17,9 +17,11 @@ import { PerformerService } from './culturals/performers-list/perfomer.service';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 
-import * as firebase from 'firebase';
+import * as firebase from 'firebase/app';
 import { AuthService } from './auth.service';
 import { SignupComponent } from './signup/signup.component';
+import { AboutComponent } from './about/about.component';
+import { AuthGuard } from './auth/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { SignupComponent } from './signup/signup.component';
     AdminComponent,
     FooterComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { SignupComponent } from './signup/signup.component';
   providers: [
     CulturalService,
     PerformerService,
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

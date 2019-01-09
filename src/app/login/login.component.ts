@@ -18,7 +18,8 @@ export class LoginComponent implements OnInit {
     const email = form.value.email;
     const pass = form.value.password;
 
-    this.authService.signIn(email,pass);
+    this.authService.signIn(email, pass);
+
   }
 
 }

@@ -3,11 +3,16 @@
   <nav [ngClass]="{ 'show': navbarOpen }">
       <ul>
           <li><a routerLink="/main">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a routerLink="/about">About</a></li>
           <li><a href="#">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="/login">Login</a></li>
-          <li><a routerLink="/signup">Signup</a></li>
+          <li><a href="#">Contact</a></li>
+          <ng-template [ngIf]="!authService.isAuthenticated()">
+                <li><a routerLink="/login">Login</a></li>
+                <li><a routerLink="/signup">Signup</a></li>
+          </ng-template>
+          <li><button (click)="onLogout()" 
+             *ngIf="authService.isAuthenticated()"
+             class="btn btn-danger">Logout</button></li>
       </ul>
   </nav>
   <button class="menu" type="button"
